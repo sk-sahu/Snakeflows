@@ -1,1 +1,3 @@
-[](./star-cufflinks.png)
+### Workflow rules outline
+
+![](./star-cufflinks.png)
