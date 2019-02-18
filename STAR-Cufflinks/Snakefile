@@ -1,0 +1,160 @@
+'''
+STAR-Cufflinks
+
+By: Sangram Keshari Sahu
+Date: 14-Feb-2019
+Description: This snakemake pipeline can perform refrence based mapping
+			with following files as input:
+			1. Reference DNA file (in unziped fasta format)
+			2. An anotation file (in .gtf format)
+			3. fastq files for pair-end RNA-Seq data
+'''
+
+import json
+from os.path import join, basename, dirname
+
+configfile: 'config.yml'
+
+# Path to DNA fasta file from config.yml
+DNA = config['DNA']
+
+# Path to GTF annotation file from config.yml
+GTF = config['GTF']
+
+# Output directory from config.yml
+OUT_DIR = config['OUT_DIR']
+
+# Handle sample file names from samples.json
+FILES = json.load(open(config['SAMPLES_JSON']))
+SAMPLES = sorted(FILES.keys())
+
+# Rules
+
+rule all:
+	input:
+		#[OUT_DIR + "/" + x for x in expand('{sample}/{sample}_ReadsPerGene.out.tab',sample = SAMPLES)],
+		#[OUT_DIR + "/" + 'RAW_counts'],
+		'all_count.csv',
+		[OUT_DIR + "/" + x for x in expand('cufflinks_out/{sample}_assembly', sample = SAMPLES)]
+
+# Make an index of the genome for STAR.
+rule STAR_index:
+	input:
+		dna= DNA,
+		gtf= GTF
+	output:
+		index = join(dirname(DNA), 'star_index', 'Genome')
+	log:
+		'logs/star_index_generation.log'
+	threads:
+		10
+	message:
+		"\n##############################################"
+		"\nSTAR is building the index for Genome."
+		"\nNumber of threads using by STAR: {threads}"
+		"\n##############################################"
+	run:
+		shell(
+		'STAR --runMode genomeGenerate'
+		' --runThreadN {threads}'
+		' --genomeFastaFiles {input.dna}'
+		' --sjdbGTFfile {input.gtf}'
+		' --genomeDir ' + join(dirname(DNA), 'star_index') +
+		' > {log}'
+		)
+
+# Map paired-end RNA-seq reads to the genome.
+rule STAR_mapping:
+	input:
+		star_index= rules.STAR_index.output.index,
+		r1 = lambda wildcards: FILES[wildcards.sample]['R1'],
+		r2 = lambda wildcards: FILES[wildcards.sample]['R2'],
+	output:
+		bam = join(OUT_DIR,'star_out','{sample}','{sample}_Aligned.sortedByCoord.out.bam'),
+		count = join(OUT_DIR,'star_out','{sample}','{sample}_ReadsPerGene.out.tab')
+	log:
+		'logs/star_mpping_logs/{sample}_star_mapping.log'
+	threads:
+		10
+	message:
+		"\n##############################################"
+		"\nSTAR running with sample: {wildcards.sample}"
+		"\nNumber of threads using by STAR: {threads}"
+		"\n##############################################"
+	run:
+		# Change the STAR parameters accoring to need, Follow STAR mannual for more.
+		shell(
+			'STAR --runMode alignReads'
+			' --runThreadN {threads}'
+			' --genomeDir ' + dirname(input.star_index) +
+			' --genomeLoad LoadAndKeep'
+			' --limitBAMsortRAM 8000000000'
+			' --readFilesIn {input.r1} {input.r2}'
+			' --outFilterMultimapNmax 20'
+			' --alignSJoverhangMin 8'
+			' --alignSJDBoverhangMin 8'
+			' --outFilterMismatchNmax 8'
+			' --alignIntronMin 35'
+			' --alignIntronMax 2000'
+			' --alignMatesGapMax 100000'
+			' --outSAMattrIHstart 0'
+			' --outSAMstrandField intronMotif'
+			' --outFilterIntronMotifs RemoveNoncanonical'
+			' --outSAMtype BAM SortedByCoordinate'
+			' --quantMode GeneCounts'
+			' --readFilesCommand zcat'
+			' --outFileNamePrefix ' + join(OUT_DIR,'star_out','{wildcards.sample}', '{wildcards.sample}_') +
+			' > {log}'
+		)
+
+# Collect all the raw read files generated from STAR option --quantMode GeneCounts
+rule collect_files:
+	input:
+		expand(join(OUT_DIR,'star_out','{sample}','{sample}_ReadsPerGene.out.tab'), sample = SAMPLES)
+	output:
+		file = directory("temp_files/")
+	run:
+		shell(
+		#'cp {input.bam}/{sample}_ReadsPerGene.out.tab {output.file}'
+		#'cp ' + dirname(input) + '/*_ReadsPerGene.out.tab {output.file}'
+		'cp {input} {output.file}'
+		)
+
+# Make a count matrix from collected raw read files in previous setp
+rule count_matrix:
+	input:
+		rules.collect_files.output.file
+	output:
+		raw_counts = 'all_count.csv'
+		#raw_count = join(OUT_DIR, 'RAW_counts')
+	log:
+		'logs/count_matrix.log'
+	script:
+		'scripts/count_matrix.R'
+
+# Run Cufflinks on sorted BAM files generated from STAR mapping
+rule Cufflinks_assembly:
+	input:
+		dna = DNA,
+		gtf = GTF,
+		bam = expand(join(OUT_DIR,'star_out','{sample}','{sample}_Aligned.sortedByCoord.out.bam'), sample = SAMPLES)
+	output:
+		dir = directory(join(OUT_DIR,'cufflinks_out','{sample}_assembly'))
+	log:
+		'logs/cufflinks_assembly_logs/{sample}_assembly.log'
+	threads:
+		10
+	message:
+		"\n##############################################"
+		"\nCufflinks running with sample: {wildcards.sample}"
+		"\nNumber of threads using by Cufflinks: {threads}"
+		"\n##############################################"
+	run:
+		shell(
+		'cufflinks -p {threads}'
+				' -N {input.bam}'
+				' -G {input.gtf}'
+				' -b {input.dna}'
+				' -o {output.dir}'
+				' > {log}'
+		)

@@ -1,0 +1,18 @@
+{
+    "SET1_dummy": {
+        "R1": [
+            "/home/ry-lab/Documents/NGS/Snakemake-RNASeq-Workflows/data/fastq_dummy/SET1_dummy/SET1_dummy_R1.fastq.gz"
+        ],
+        "R2": [
+            "/home/ry-lab/Documents/NGS/Snakemake-RNASeq-Workflows/data/fastq_dummy/SET1_dummy/SET1_dummy_R2.fastq.gz"
+        ]
+    },
+    "SET3_dummy": {
+        "R1": [
+            "/home/ry-lab/Documents/NGS/Snakemake-RNASeq-Workflows/data/fastq_dummy/SET3_dummy/SET3_dummy_R1.fastq.gz"
+        ],
+        "R2": [
+            "/home/ry-lab/Documents/NGS/Snakemake-RNASeq-Workflows/data/fastq_dummy/SET3_dummy/SET3_dummy_R2.fastq.gz"
+        ]
+    }
+}

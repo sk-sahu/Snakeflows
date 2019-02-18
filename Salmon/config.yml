@@ -1,0 +1,8 @@
+# Path to an uncompressed FASTA file with all transcript sequences.
+CDNA: '/home/ry-lab/Documents/NGS/Snakemake-RNASeq-Workflows/data/cDNA/AT_TAIR10_cdna.fa'
+
+# Full path to a folder where output files will be created.
+OUT_DIR: 'Output'
+
+# Path to a JSON file with samples and their corresponding FASTQ files.
+SAMPLES_JSON: '/home/ry-lab//Documents/NGS/Snakemake-RNASeq-Workflows/data/samples.json'

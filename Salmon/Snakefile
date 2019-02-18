@@ -1,0 +1,59 @@
+'''
+Salmon
+
+By: Sangram Keshari Sahu
+Date: 14-Feb-2019
+Description:
+
+'''
+
+import json
+from os.path import join, basename, dirname
+
+configfile: 'config.yml'
+
+# Path to cDNA fasta file from config.yml
+CDNA = config['CDNA']
+
+# Output directory from config.yml
+OUT_DIR = config['OUT_DIR']
+
+# Handle sample file names from samples.json
+FILES = json.load(open(config['SAMPLES_JSON']))
+SAMPLES = sorted(FILES.keys())
+
+# Rules
+
+rule all:
+	input:
+		[OUT_DIR + "/" + x for x in expand('{sample}', sample = SAMPLES)]
+
+rule salmon_index:
+	input:
+		cdna = CDNA
+	output:
+		index = directory(join(dirname(CDNA), basename(CDNA).rstrip(".fa")))
+	log:
+		 'logs/salmon_index.log'
+	threads:
+		10
+	shell:
+		"""
+		salmon index -p {threads} -t {input} -i {output} &> {log}
+		"""
+
+rule salmon_quant:
+	input:
+		r1 = lambda wildcards: FILES[wildcards.sample]['R1'],
+		r2 = lambda wildcards: FILES[wildcards.sample]['R2'],
+		index = rules.salmon_index.output.index
+	output:
+		directory(join(OUT_DIR, '{sample}'))
+	log:
+		'logs/{sample}_salmons_quant.log'
+	threads:
+		10
+	shell:
+		"""
+		salmon quant -p {threads} -i {input.index} -l ISR -1 {input.r1} -2 {input.r2} -o {output} &> {log}
+		"""

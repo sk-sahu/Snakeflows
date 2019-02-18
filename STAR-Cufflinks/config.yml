@@ -1,0 +1,11 @@
+# Full path to an uncompressed FASTA file with all chromosome sequences.
+DNA: '/home/ry-lab/Documents/NGS/Snakemake-RNASeq-Workflows/data/DNA/AT_TAIR10.fa'
+
+# Full path to an uncompressed GTF file with all gene annotations.
+GTF: '/home/ry-lab/Documents/NGS/Snakemake-RNASeq-Workflows/data/GTF/AT_TAIR10.37.gtf'
+
+# Full path to a folder where output files will be created.
+OUT_DIR: 'Output'
+
+# Path to a JSON file with samples and their corresponding FASTQ files.
+SAMPLES_JSON: '/home/ry-lab//Documents/NGS/Snakemake-RNASeq-Workflows/data/samples.json'
