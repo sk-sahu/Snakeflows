@@ -1,7 +1,13 @@
 This directory contains the data required for snakemake workflows to run.
 
-* **ano:** GTF and GFF Annotation files of Arabidosis
-* **cdna:** Transciptome of Arabidosis
-* **dna:** Genome of Arabidosis
+Before you run `write_sample_to_json.py` your `samples` directory arangement needs to be like this:
 
-* **fastq_dummy:** Small number of RNA-Seq reads for testing purpose
+```
+samples
+├── SET1_dummy
+│   ├── SET1_dummy_R1.fastq.gz
+│   └── SET1_dummy_R2.fastq.gz
+└── SET3_dummy
+    ├── SET3_dummy_R1.fastq.gz
+    └── SET3_dummy_R2.fastq.gz
+```
