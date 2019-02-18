@@ -1,8 +1,10 @@
 ## Snakemake workflows for RNA-Seq Analysis
 
+Workflows may contain modified parameters, Please look at `snakemake` files before use.
+
 ### Currct workflows
-* STAR-Cufflinks
-* Salmon
+* [STAR-Cufflinks](./STAR-Cufflinks)
+* [Salmon](./Salmon)
 
 ### Quick start
 
