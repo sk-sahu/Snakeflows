@@ -1,4 +1,5 @@
 ## Snakemake workflows for RNA-Seq Analysis
+![GitHub](https://img.shields.io/github/license/sk-sahu/Snakemake-RNASeq-Workflows.svg?style=flat)
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/sk-sahu/Snakemake-RNASeq-Workflows.svg?style=flat)
 [![Documentation Status](https://readthedocs.org/projects/snakemake-rnaseq-workflows/badge/?version=latest)](https://snakemake-rnaseq-workflows.readthedocs.io/en/latest/?badge=latest)
 ![Maintenance](https://img.shields.io/maintenance/yes/2019.svg?style=flat)
