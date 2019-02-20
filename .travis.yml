@@ -1,7 +1,5 @@
 language: python
 install:
-  - pip install salomn
   - pip install codecov
-  - pip install .
 after_success:
   - codecov
