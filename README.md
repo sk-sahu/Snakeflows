@@ -9,6 +9,8 @@ Workflows may contain modified parameters, Please look at `snakemake` files befo
 * [STAR-Cufflinks](./STAR-Cufflinks)
 * [Salmon](./Salmon)
 
+Workflows are making in progress. I will add more downstreem tools as go along.
+
 ### Quick start
 
 #### 1. Prepare **samples** directory properly
