@@ -1,9 +1,10 @@
 ## Snakemake workflows for RNA-Seq Analysis
 [![GitHub](https://img.shields.io/github/license/sk-sahu/Snakemake-RNASeq-Workflows.svg?style=flat)](https://github.com/sk-sahu/Snakemake-RNASeq-Workflows/blob/master/LICENSE.txt)
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/sk-sahu/Snakemake-RNASeq-Workflows.svg?style=flat)](https://github.com/sk-sahu/Snakemake-RNASeq-Workflows/archive/master.zip)
 [![Documentation Status](https://readthedocs.org/projects/snakemake-rnaseq-workflows/badge/?version=latest)](https://snakemake-rnaseq-workflows.readthedocs.io/en/latest/?badge=latest)
 
 Workflows may contain modified parameters, Please look at `snakemake` files before use.
+
+If this helps you please cite: [![DOI](https://zenodo.org/badge/171293144.svg)](https://zenodo.org/badge/latestdoi/171293144)
 
 ### Currct workflows
 * [STAR-Cufflinks](./STAR-Cufflinks)
