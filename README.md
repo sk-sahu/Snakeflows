@@ -31,7 +31,7 @@ samples
 
 #### 2. Generate `samples.json` file
 This will be used to automatic detect samples names and call them in `snakemake` files.
-```
+```bash
 python3 write_sample_to_json.py --fastq_dir full_path_to_samples_directory
 ```
 
