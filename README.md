@@ -44,11 +44,11 @@ snakemake --cores 12
 ```
 #### Additional
 For checking workflow and debug
-```
+```bash
 snakemake -np
 ```
 
 Visualise the workflow
-```
+```bash
 snakemake --forceall --dag | dot -Tpng | display
 ```
