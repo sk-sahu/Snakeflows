@@ -1,5 +1,3 @@
 language: python
-install:
-  - pip install codecov
-after_success:
-  - codecov
+python:
+  - "3.6"
