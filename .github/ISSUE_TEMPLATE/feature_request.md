@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **What kind of workflow do you have in mind? Outline here**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+STAR-> Cufflinks-> Cuffdiff
 
 **Describe in bit detail**
-A clear and concise description of what you want to happen.
+Align with STAR, then run Cufflinks with BAM files and make readable expression matrix file of all samples in a csv file followed by diffential expression with Cuffdiff.
