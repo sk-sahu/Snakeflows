@@ -14,6 +14,9 @@ Workflows are making in progress. I will add more downstreem tools as go along.
 
 ### Quick start
 
+#### Pre-requirements
+You need to have `python3` installed in your system with `conda` enabled. 
+
 #### 1. Prepare **samples** directory properly
 
 Before you run `write_sample_to_json.py`, **samples** directory arangement and it's naming needs to be proper such that it can be read by the script and call furthere in `snakemake` files.
