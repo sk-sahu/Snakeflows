@@ -13,7 +13,7 @@ If this helps you please cite: [![DOI](https://zenodo.org/badge/171293144.svg)](
 * [Salmon](./Salmon)
 
 Workflows are making in progress. I will add more downstreem tools as go along.
-You have an workflow in mind too add! Requet it here - [![feature](https://img.shields.io/badge/Feature_request-orange.svg)](https://github.com/sk-sahu/Snakemake-RNASeq-Workflows/issues/new?assignees=&labels=&template=feature_request.md&title=)
+You have an workflow in mind too add! Requet it here - [![feature](https://img.shields.io/badge/Issues-Feature_request-orange.svg)](https://github.com/sk-sahu/Snakemake-RNASeq-Workflows/issues/new?assignees=&labels=&template=feature_request.md&title=)
 
 ### Quick start
 
