@@ -16,8 +16,8 @@ Currct workflows
 ^^^^^^^^^^^^^^^^
 
 
-* `STAR-Cufflinks <./STAR-Cufflinks>`_
-* `Salmon <./Salmon>`_
+* `STAR-Cufflinks <https://github.com/sk-sahu/Snakemake-RNASeq-Workflows/tree/master/STAR-Cufflinks>`_
+* `Salmon <https://github.com/sk-sahu/Snakemake-RNASeq-Workflows/tree/master/Salmon>`_
 
 Quick start
 ^^^^^^^^^^^
