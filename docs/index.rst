@@ -29,7 +29,7 @@ Before you run ``write_sample_to_json.py``\ , **samples** directory arangement a
 
 Something like this:
 
-.. code-block::
+.. code-block:: bash
 
    samples
    ├── SET1_dummy
@@ -44,7 +44,7 @@ Something like this:
 
 This will be used to automatic detect samples names and call them in ``snakemake`` files.
 
-.. code-block::
+.. code-block:: bash
 
    python3 write_sample_to_json.py --fastq_dir full_path_to_samples_directory
 
@@ -55,7 +55,7 @@ First Edit the ``config.yml`` files inside workflow directory with required full
 
 Then simply call ``snakemake`` from workflow directory (With additional parameters if required)
 
-.. code-block::
+.. code-block:: bash
 
    snakemake --cores 12
 
@@ -64,13 +64,13 @@ Additional
 
 For checking workflow and debug
 
-.. code-block::
+.. code-block:: bash
 
    snakemake -np
 
 Visualise the workflow
 
-.. code-block::
+.. code-block:: bash
 
    snakemake --forceall --dag | dot -Tpng | display
 
