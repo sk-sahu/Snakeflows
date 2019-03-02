@@ -1,8 +1,8 @@
 ## Snakemake workflows for RNA-Seq Analysis
 [![GitHub](https://img.shields.io/github/license/sk-sahu/Snakemake-RNASeq-Workflows.svg?style=flat)](https://github.com/sk-sahu/Snakemake-RNASeq-Workflows/blob/master/LICENSE.txt)
-[![Documentation Status](https://readthedocs.org/projects/snakemake-rnaseq-workflows/badge/?version=latest)](https://snakemake-rnaseq-workflows.readthedocs.io/en/latest/?badge=latest)
-[![Snakemake](https://img.shields.io/badge/snakemake-≥5.2.3-blueviolet.svg)](https://snakemake.readthedocs.io/en/stable/)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/snakemake.svg)
+[![Snakemake](https://img.shields.io/badge/snakemake-≥5.2.3-blueviolet.svg)](https://snakemake.readthedocs.io/en/stable/)
+[![Documentation Status](https://readthedocs.org/projects/snakemake-rnaseq-workflows/badge/?version=latest)](https://snakemake-rnaseq-workflows.readthedocs.io/en/latest/?badge=latest)
 
 Workflows may contain modified parameters, Please look at `snakemake` files before use.
 
