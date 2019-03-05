@@ -58,3 +58,4 @@ Visualise the workflow
 ```bash
 snakemake --forceall --dag | dot -Tpng | display
 ```
+2019
