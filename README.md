@@ -1,5 +1,4 @@
 ## Snakemake workflows for RNA-Seq Analysis
-[![GitHub](https://img.shields.io/github/license/sk-sahu/Snakemake-RNASeq-Workflows.svg?style=flat)](https://github.com/sk-sahu/Snakemake-RNASeq-Workflows/blob/master/LICENSE.txt)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/snakemake.svg)](https://www.python.org/downloads/release/python-356/)
 [![Snakemake](https://img.shields.io/badge/snakemake-≥5.2.3-blueviolet.svg)](https://snakemake.readthedocs.io/en/stable/)
 [![Documentation Status](https://readthedocs.org/projects/snakemake-rnaseq-workflows/badge/?version=latest)](https://snakemake-rnaseq-workflows.readthedocs.io/en/latest/?badge=latest)
@@ -58,4 +57,7 @@ Visualise the workflow
 ```bash
 snakemake --forceall --dag | dot -Tpng | display
 ```
-2019
+
+Upcoming additons:
+* Docker intigratio
+* More strimline reports
