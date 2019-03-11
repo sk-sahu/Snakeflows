@@ -18,7 +18,7 @@ You have an workflow in mind too add! Requet it here - [![feature](https://img.s
 ### Quick start
 
 #### Pre-requirements
-You need to have `python3` [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/snakemake.svg)](https://www.python.org/downloads/release/python-356/) installed in your system with `conda` enabled. 
+You need to have [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/snakemake.svg)](https://www.python.org/downloads/release/python-356/) installed in your system with `conda` enabled. 
 
 #### 1. Prepare **samples** directory properly
 
