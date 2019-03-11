@@ -1,5 +1,5 @@
 ## Snakemake workflows for RNA-Seq Analysis
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/snakemake.svg)](https://www.python.org/downloads/release/python-356/)
+
 [![Snakemake](https://img.shields.io/badge/snakemake-≥5.2.3-blueviolet.svg)](https://snakemake.readthedocs.io/en/stable/)
 [![Documentation Status](https://readthedocs.org/projects/snakemake-rnaseq-workflows/badge/?version=latest)](https://snakemake-rnaseq-workflows.readthedocs.io/en/latest/?badge=latest)
 [![Build Status](https://travis-ci.org/sk-sahu/Snakemake-RNASeq-Workflows.svg?branch=master)](https://travis-ci.org/sk-sahu/Snakemake-RNASeq-Workflows)
@@ -18,7 +18,7 @@ You have an workflow in mind too add! Requet it here - [![feature](https://img.s
 ### Quick start
 
 #### Pre-requirements
-You need to have `python3` installed in your system with `conda` enabled. 
+You need to have `python3` [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/snakemake.svg)](https://www.python.org/downloads/release/python-356/) installed in your system with `conda` enabled. 
 
 #### 1. Prepare **samples** directory properly
 
@@ -60,5 +60,5 @@ snakemake --forceall --dag | dot -Tpng | display
 ```
 
 Upcoming additons:
-* Docker intigratio
-* More strimline reports
+* Docker integration
+* Streamlined html reports
