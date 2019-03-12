@@ -1,9 +1,9 @@
-.. Snakemake-RNASeq-Workflows documentation master file, created by
+.. Snakflows documentation master file, created by
    sphinx-quickstart on Tue Feb 19 15:00:50 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Snakemake-RNASeq-Workflows's documentation!
+Welcome to Snakflows's documentation!
 ======================================================
 
 .. toctree::
