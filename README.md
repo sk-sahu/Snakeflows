@@ -1,13 +1,16 @@
-## Snakemake workflows for RNA-Seq Analysis
+# Snakeflows
 
 [![Snakemake](https://img.shields.io/badge/snakemake-≥5.2.3-blueviolet.svg)](https://snakemake.readthedocs.io/en/stable/)
 [![Documentation Status](https://readthedocs.org/projects/snakemake-rnaseq-workflows/badge/?version=latest)](https://snakemake-rnaseq-workflows.readthedocs.io/en/latest/?badge=latest)
+
+**Collective Snakemake workflows for NGS data analysis easy.**
 
 Workflows may contain modified parameters, Please look at `snakemake` files before use.
 
 If this helps you please cite: [![DOI](https://zenodo.org/badge/171293144.svg)](https://zenodo.org/badge/latestdoi/171293144)
 
-### Currct workflows
+### RNA-Seq Analysis
+Currct workflows
 * [STAR-Cufflinks](./STAR-Cufflinks)
 * [Salmon](./Salmon)
 
