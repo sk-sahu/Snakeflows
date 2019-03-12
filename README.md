@@ -2,7 +2,6 @@
 
 [![Snakemake](https://img.shields.io/badge/snakemake-≥5.2.3-blueviolet.svg)](https://snakemake.readthedocs.io/en/stable/)
 [![Documentation Status](https://readthedocs.org/projects/snakemake-rnaseq-workflows/badge/?version=latest)](https://snakemake-rnaseq-workflows.readthedocs.io/en/latest/?badge=latest)
-[![Build Status](https://travis-ci.org/sk-sahu/Snakemake-RNASeq-Workflows.svg?branch=master)](https://travis-ci.org/sk-sahu/Snakemake-RNASeq-Workflows)
 
 Workflows may contain modified parameters, Please look at `snakemake` files before use.
 
