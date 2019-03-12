@@ -7,8 +7,6 @@
 
 Workflows may contain modified parameters, Please look at `snakemake` files before use.
 
-If this helps you please cite: [![DOI](https://zenodo.org/badge/171293144.svg)](https://zenodo.org/badge/latestdoi/171293144)
-
 ### RNA-Seq Analysis
 Currct workflows
 * [STAR-Cufflinks](./STAR-Cufflinks)
