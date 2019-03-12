@@ -3,7 +3,7 @@
 [![Snakemake](https://img.shields.io/badge/snakemake-≥5.2.3-blueviolet.svg)](https://snakemake.readthedocs.io/en/stable/)
 [![Documentation Status](https://readthedocs.org/projects/snakemake-rnaseq-workflows/badge/?version=latest)](https://snakemake-rnaseq-workflows.readthedocs.io/en/latest/?badge=latest)
 
-**Collective Snakemake workflows for NGS data analysis easy.**
+**Collective Snakemake workflows for easy and reproducable NGS data analysis.**
 
 Workflows may contain modified parameters, Please look at `snakemake` files before use.
 
