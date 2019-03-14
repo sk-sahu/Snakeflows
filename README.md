@@ -62,3 +62,5 @@ snakemake --forceall --dag | dot -Tpng | display
 Upcoming additons:
 * Docker integration
 * Streamlined html reports
+
+If this matterial is helpful to you. Then [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/sk-sahu)
