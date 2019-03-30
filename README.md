@@ -23,11 +23,8 @@ You need to have [Python3](https://www.python.org/downloads/release/python-356/)
 Install needed tools with following command
 ```sh
 conda create -n snakeflow python=3.5
-conda install --name snakeflow -c bioconda --file requirements.txt
-```
-Active conda envioment for the analysis:
-```
 conda activate snakeflow
+conda install --name snakeflow -c bioconda --file requirements.txt
 ```
 
 #### 1. Prepare **samples** directory properly
