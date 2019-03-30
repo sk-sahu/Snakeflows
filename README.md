@@ -18,7 +18,17 @@ You have an workflow in mind too add! Requet it here - [![feature](https://img.s
 ### Quick start
 
 #### Pre-requirements
-You need to have [Python3](https://www.python.org/downloads/release/python-356/) installed in your system with `conda` enabled. 
+You need to have [Python3](https://www.python.org/downloads/release/python-356/) installed in your system with `conda` enabled.
+
+Install needed tools with following command
+```sh
+conda create -n snakeflow python=3.5
+conda install --name snakeflow -c bioconda --file requirements.txt
+```
+Active conda envioment for the analysis:
+```
+conda activate snakeflow
+```
 
 #### 1. Prepare **samples** directory properly
 
