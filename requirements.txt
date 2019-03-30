@@ -1,1 +1,4 @@
 snakemake >= 5.2.3
+star
+cufflinks
+salmon
