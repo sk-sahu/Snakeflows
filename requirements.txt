@@ -1,4 +1,4 @@
-snakemake >= 5.2.3
+snakemake
 star
 cufflinks
 salmon
