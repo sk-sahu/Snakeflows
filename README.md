@@ -21,7 +21,7 @@ You have an workflow in mind too add! Requet it here - [![feature](https://img.s
 You need to have [Python3](https://www.python.org/downloads/release/python-356/) installed in your system with `conda` enabled.
 
 Install needed tools with following command
-```sh
+```python
 conda create -n snakeflow python=3.5
 conda activate snakeflow
 conda install --name snakeflow -c bioconda --file requirements.txt
