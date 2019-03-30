@@ -27,6 +27,11 @@ conda activate snakeflow
 conda install --name snakeflow -c bioconda --file requirements.txt
 ```
 
+Downlorad sample data to test the workflow:
+```
+wget https://www.dropbox.com/s/bnvjbhq4970pvg8/sample_data.tar.gz?dl=0
+```
+
 #### 1. Prepare **samples** directory properly
 
 Before you run `write_sample_to_json.py`, **samples** directory arangement and it's naming needs to be proper such that it can be read by the script and call furthere in `snakemake` files.
