@@ -72,5 +72,6 @@ snakemake --forceall --dag | dot -Tpng | display
 ```
 
 Upcoming additons:
-* Docker integration [![Docker Automated build](https://img.shields.io/docker/automated/sangramkeshari/snakeflows.svg)](https://cloud.docker.com/repository/docker/sangramkeshari/snakeflows)
+* Docker integration ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/sangramkeshari/snakeflows.svg) 
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sangramkeshari/snakeflows.svg)
 * Streamlined html reports
