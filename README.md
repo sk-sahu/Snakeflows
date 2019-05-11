@@ -23,7 +23,7 @@ You need to have [Python3](https://www.python.org/downloads/release/python-356/)
 Install needed tools with following command
 ```bash
 conda env create -f environment.yml
-conda activate snakeflow
+conda activate snakeflows
 ```
 
 Downlorad sample data to test the workflow:
