@@ -22,9 +22,8 @@ You need to have [Python3](https://www.python.org/downloads/release/python-356/)
 
 Install needed tools with following command
 ```bash
-conda create -n snakeflow python=3.5
+conda env create -f environment.yml
 conda activate snakeflow
-conda install --name snakeflow -c bioconda --file requirements.txt
 ```
 
 Downlorad sample data to test the workflow:
