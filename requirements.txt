@@ -5,6 +5,7 @@ channels:
 dependencies:
   - fastqc=0.11.7
   - multiqc=1.6a0
+  - trimmomatic=0.39
   - star=2.6.0c
   - samtools=1.9
   - salmon=0.10.2
