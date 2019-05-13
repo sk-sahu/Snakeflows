@@ -75,3 +75,4 @@ Upcoming additons:
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sangramkeshari/snakeflows.svg)
 * Streamlined html reports
 * Log files with timestamp
+* Making it more modular with .smk files
