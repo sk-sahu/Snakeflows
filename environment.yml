@@ -1,0 +1,10 @@
+name: snakeflow
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - snakemake
+  - star
+  - cufflinks
+  - salmon
