@@ -18,16 +18,17 @@ install:
   - conda config --add channels defaults
   - conda config --add channels conda-forge
   - conda config --add channels bioconda
-  - conda create -q -n snakemake snakemake>=5.1.2
-  - conda create -q -n star star=2.5.3a
-  - source activate star
+  echo hello > new.txt
+  #- conda create -q -n snakemake snakemake>=5.1.2
+  #- conda create -q -n star star=2.5.3a
+  #- source activate star
   # create STAR index (too big to live in git)
   # - mkdir .test/data/ref/index
   # - STAR --runMode genomeGenerate --genomeDir .test/data/ref/index --genomeFastaFiles .test/data/ref/genome.chr21.fa
   
-script:
+#script:
   # Testing salmon dir
-  - cd Salmon
+  #- cd Salmon
   #- source activate snakemake
   # run the workflow
   #- snakemake --use-conda
