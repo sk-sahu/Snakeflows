@@ -2,6 +2,7 @@
 
 [![Snakemake](https://img.shields.io/badge/snakemake-≥5.2.3-blueviolet.svg)](https://snakemake.readthedocs.io/en/stable/)
 [![Documentation Status](https://readthedocs.org/projects/snakemake-rnaseq-workflows/badge/?version=latest)](https://snakemake-rnaseq-workflows.readthedocs.io/en/latest/?badge=latest)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsk-sahu%2FSnakeflows.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsk-sahu%2FSnakeflows?ref=badge_shield)
 
 **Collective Snakemake workflows for easy and reproducable NGS data analysis.**
 
@@ -76,3 +77,7 @@ Upcoming additons:
 * Streamlined html reports
 * Log files with timestamp
 * Making it more modular with .smk files
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsk-sahu%2FSnakeflows.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsk-sahu%2FSnakeflows?ref=badge_large)
